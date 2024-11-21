@@ -1,32 +1,43 @@
 {
+    "version": 2,
+    "builds": [
+        {
+            "src": "build/index.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "build/static/**/*",
+            "use": "@vercel/static"
+        }
+    ],
     "routes": [
-      {
-        "src": "/",
-        "dest": "/"
-      },
-      {
-        "src": "/login",
-        "dest": "/"
-      },
-      {
-        "src": "/signup",
-        "dest": "/"
-      },
-      {
-        "src": "/all-posts",
-        "dest": "/"
-      },
-      {
-        "src": "/add-post",
-        "dest": "/"
-      },
-      {
-        "src": "/edit-post/:slug",
-        "dest": "/"
-      },
-      {
-        "src": "/post/:slug",
-        "dest": "/"
-      }
+        {
+            "src": "/",
+            "dest": "/"
+        },
+        {
+            "src": "/login",
+            "dest": "/"
+        },
+        {
+            "src": "/signup",
+            "dest": "/"
+        },
+        {
+            "src": "/all-posts",
+            "dest": "/"
+        },
+        {
+            "src": "/add-post",
+            "dest": "/"
+        },
+        {
+            "src": "/edit-post/:slug",
+            "dest": "/"
+        },
+        {
+            "src": "/post/:slug",
+            "dest": "/"
+        }
     ]
-  }
+}

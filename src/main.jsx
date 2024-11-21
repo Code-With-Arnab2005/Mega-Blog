@@ -48,10 +48,10 @@ const router = createBrowserRouter([
         )
       },
       {
-        path: "/add-post/",
+        path: "/add-post",
         element: (
           <AuthLayout authentication>
-            {" "}
+            {" "}dasfd
             <AddPost />
           </AuthLayout>
         )

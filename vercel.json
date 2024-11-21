@@ -22,11 +22,11 @@
         },
         {
             "src": "/edit-post/:slug",
-            "dest": "/edit-post/:slug"
+            "dest": "/index.html"
         },
         {
             "src": "/post/:slug",
-            "dest": "/post/:slug"
+            "dest": "/index.html"
         }
     ]
 }

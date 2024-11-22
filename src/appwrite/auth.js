@@ -31,7 +31,7 @@ export class AuthService {
     async login({email, password}) {
         try{
             const promise = await this.account.createEmailPasswordSession(email, password);
-            console.log("login: ", promise);
+            // console.log("login: ", promise);
             return promise;
         } catch(err){
             console.log(err);

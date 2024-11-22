@@ -14,7 +14,7 @@ function Login() {
     const dispatch = useDispatch();
     const [error, setError] = useState("");
 
-    const userdata = useSelector(state => state.auth.userData);
+    // const userdata = useSelector(state => state.auth.userData);
 
     const login = async (data) => {
         setError("");
@@ -24,11 +24,11 @@ function Login() {
                 if (session) {
                     // console.log("login session: ", session);
                     const userData = await authService.getCurrentUser();
-                    console.log("userData: ", userData);
+                    // console.log("userData: ", userData);
                     if (userData) 
-                        console.log(userdata);
+                        // console.log(userdata);
                         dispatch(authLogin(userData));
-                        console.log(userdata);
+                        // console.log(userdata);
                         navigate("/")
                     
                 }

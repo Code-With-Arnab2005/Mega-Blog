@@ -5,8 +5,8 @@ import conf from '../conf/conf';
 
 function RTE({ name, control, label, defaultValue = "" }) {
 
-    // console.log(import.meta.env.VITE_TINYMCE_API_KEY)
-    // console.log(conf.tynimceApiKey)
+    console.log(import.meta.env.VITE_TINYMCE_API_KEY)
+    console.log(conf.tynimceApiKey)
     return (
         <div className='w-full'>
             {label && <label className="inline-block mb-1 pl-1">{label}</label>}

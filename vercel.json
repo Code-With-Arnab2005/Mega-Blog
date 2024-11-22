@@ -1,32 +1,5 @@
 {
-    "routes": [
-        {
-            "src": "/",
-            "dest": "/"
-        },
-        {
-            "src": "/login",
-            "dest": "/"
-        },
-        {
-            "src": "/signup",
-            "dest": "/"
-        },
-        {
-            "src": "/all-posts",
-            "dest": "/"
-        },
-        {
-            "src": "/add-post",
-            "dest": "/"
-        },
-        {
-            "src": "/edit-post/:slug",
-            "dest": "/index.html"
-        },
-        {
-            "src": "/post/:slug",
-            "dest": "/index.html"
-        }
+    "rewrites": [
+        { "source": "/(.*)", "destination": "/"}
     ]
 }

@@ -10,6 +10,10 @@ const Header = () => {
 
   const authStatus = useSelector((state) => state.auth.status);
   const navigate = useNavigate();
+  const userData = useSelector(state => state.auth.userData);
+  // console.log(userData.user.name)
+  let username = userData?.user?.name || '';
+  
 
   const navItems = [
     {
@@ -37,6 +41,11 @@ const Header = () => {
       slug: "/add-post",
       active: authStatus,
     },
+    {
+      name: "My Posts",
+      slug: `/my-posts/${username}`,
+      active: authStatus,
+    }
   ]
 
 

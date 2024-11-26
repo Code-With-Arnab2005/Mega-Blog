@@ -81,6 +81,21 @@ export class Service {
         }
     }
 
+    async getUserPosts(userId) {
+        try{
+            const post = await this.databases.listDocuments(
+                conf.appwriteDatabaseId,
+                conf.appwriteCollectionId,
+                [
+                    Query.equal("userId", userId)
+                ]
+            )
+            if(post) return post;
+            else return null;
+        } catch(err){
+            throw new err;
+        }
+    }
     //now get all the documents of this collection id but only those which are status true
     async getAllPosts() {
         try {

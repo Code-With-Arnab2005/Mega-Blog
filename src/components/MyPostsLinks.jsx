@@ -13,7 +13,7 @@ const MyPostsLinks = ({username, activeButton}) => {
                 <Button
                     bgColor={activeButton === 'all-posts' ? 'bg-blue-500' : 'bg-white'}
                     textColor={activeButton === 'all-posts' ? 'text-white' : 'text-black'}
-                    className={`${activeButton==='all-posts' ? null : bg-gray-300} border-2 border-black font-bold rounded-3xl`}>
+                    className={`${activeButton==='all-posts' ? null : "hover:bg-gray-300"} border-2 border-black font-bold rounded-3xl`}>
                     all posts
                 </Button>
             </Link>
@@ -22,7 +22,7 @@ const MyPostsLinks = ({username, activeButton}) => {
                 <Button
                     bgColor={activeButton === 'active-posts' ? 'bg-blue-500' : 'bg-white'}
                     textColor={activeButton === 'active-posts' ? 'text-white' : 'text-black'}
-                    className={`${activeButton==='active-posts' ? null : bg-gray-300} border-2 border-black font-bold rounded-3xl`}>
+                    className={`${activeButton==='active-posts' ? null : "hover:bg-gray-300"} border-2 border-black font-bold rounded-3xl`}>
                     active posts
                 </Button>
             </Link>
@@ -31,7 +31,7 @@ const MyPostsLinks = ({username, activeButton}) => {
                 <Button
                     bgColor={activeButton === 'inactive-posts' ? 'bg-blue-500' : 'bg-white'}
                     textColor={activeButton === 'inactive-posts' ? 'text-white' : 'text-black'}
-                    className={`${activeButton==='inactive-posts' ? null : bg-gray-300} border-2 border-black font-bold rounded-3xl`}>
+                    className={`${activeButton==='inactive-posts' ? null : "hover:bg-gray-300"} border-2 border-black font-bold rounded-3xl`}>
                     inactive posts
                 </Button>
             </Link>

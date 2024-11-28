@@ -1,31 +1,32 @@
-import React, { useEffect, useState } from 'react';
-import Container from './Container';
+import React, { useEffect, useState } from 'react'
 import service from '../appwrite/config';
 import { useSelector } from 'react-redux';
+import Container from './Container';
 import PostCard from './PostCard';
 import MyPostsLinks from './MyPostsLinks';
 
-const MyPost = () => {
+const MyActivePosts = () => {
+
     const [posts, setPosts] = useState([]);
     const [username, setUsername] = useState(null);
     const userData = useSelector(state => state.auth.userData)
 
     useEffect(() => {
-        service.getUserPosts(userData?.user.$id)
+        service.getUserActivePosts(userData?.user.$id)
             .then((userPosts) => {
-                setUsername(userData.user.name)
                 if (userPosts) {
                     setPosts(userPosts.documents);
+                    setUsername(userData.user.name)
                 }
             })
-    }, [userData])
+    }, [])
 
     return (
         <div className='w-full py-8'>
             <Container>
                 <div>
                     <h1 className="text-4xl font-bold mb-4">MY POSTS</h1>
-                    <MyPostsLinks username={username} activeButton={"all-posts"} />
+                    <MyPostsLinks username={username} activeButton={"active-posts"} />
                     {posts.length === 0 && (
                         <Container>
                             <div className="text-4xl font-bold w-vw h-[50vh] shadow-xl flex justify-center items-center">
@@ -47,8 +48,7 @@ const MyPost = () => {
                 </div>
             </Container>
         </div>
-
     )
 }
 
-export default MyPost
+export default MyActivePosts

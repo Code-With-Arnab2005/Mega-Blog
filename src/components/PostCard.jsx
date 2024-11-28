@@ -9,12 +9,11 @@ function PostCard({ $id, title, featuredImage }) {
   useEffect(() => {
     service.getFilePreview(featuredImage).then((url) => {
       setImgurl(url);
-      console.log(imgurl);
     })
   }, [])
   return (
     <Link to={`/post/${$id}`}>
-      <div className='w-full bg-gray-100 rounded-xl p-4'>
+      <div className='w-full bg-gray-100 rounded-xl p-4 hover:bg-gray-300 transition-all duration-200'>
         <div className='w-full justify-center mb-4'>
           <img src={imgurl} alt={title}
             className='rounded-xl' />

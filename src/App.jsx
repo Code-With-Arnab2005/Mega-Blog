@@ -28,7 +28,7 @@ function App() {
     <div className='mt-4 bg-blue-300 py-2 flex justify-center items-center rounded-xl text-3xl text-blue-600'>Loading...</div>
   )
   return (
-    <div className='min-h-screen flex flex-wrap content-between bg-gradient-to-r from-blue-300 to-blue-100 '>
+    <div className='min-h-screen flex flex-wrap content-between bg-gradient-to-r from-blue-300 to-blue-100'>
       <div className='w-full block'>
         <Header />
         <main className='min-h-[60vh]'>

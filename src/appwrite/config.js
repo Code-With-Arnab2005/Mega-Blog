@@ -93,7 +93,41 @@ export class Service {
             if(post) return post;
             else return null;
         } catch(err){
-            throw new err;
+            throw err;
+        }
+    }
+
+    async getUserActivePosts(userId){
+        try {
+            const post = await this.databases.listDocuments(
+                conf.appwriteDatabaseId,
+                conf.appwriteCollectionId,
+                [
+                    Query.equal("userId", userId),
+                    Query.equal("status", "active")
+                ]
+            )
+            if(post) return post;
+            else return null;
+        } catch(error) {
+            throw error;
+        }
+    }
+
+    async getUserInactivePosts(userId){
+        try {
+            const post = await this.databases.listDocuments(
+                conf.appwriteDatabaseId,
+                conf.appwriteCollectionId,
+                [
+                    Query.equal("userId", userId),
+                    Query.equal("status", "inactive")
+                ]
+            )
+            if(post) return post;
+            else return null;
+        } catch(error) {
+            throw error;
         }
     }
     //now get all the documents of this collection id but only those which are status true

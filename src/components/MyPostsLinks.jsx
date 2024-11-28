@@ -13,7 +13,7 @@ const MyPostsLinks = ({username, activeButton}) => {
                 <Button
                     bgColor={activeButton === 'all-posts' ? 'bg-blue-500' : 'bg-white'}
                     textColor={activeButton === 'all-posts' ? 'text-white' : 'text-black'}
-                    className="hover:bg-gray-300 border-2 border-black font-bold rounded-3xl">
+                    className="hover:bg-gray-300 hover:text-black border-2 border-black font-bold rounded-3xl">
                     all posts
                 </Button>
             </Link>
@@ -22,7 +22,7 @@ const MyPostsLinks = ({username, activeButton}) => {
                 <Button
                     bgColor={activeButton === 'active-posts' ? 'bg-blue-500' : 'bg-white'}
                     textColor={activeButton === 'active-posts' ? 'text-white' : 'text-black'}
-                    className="hover:bg-gray-300 border-2 border-black font-bold rounded-3xl">
+                    className="hover:bg-gray-300 hover:text-black border-2 border-black font-bold rounded-3xl">
                     active posts
                 </Button>
             </Link>
@@ -31,7 +31,7 @@ const MyPostsLinks = ({username, activeButton}) => {
                 <Button
                     bgColor={activeButton === 'inactive-posts' ? 'bg-blue-500' : 'bg-white'}
                     textColor={activeButton === 'inactive-posts' ? 'text-white' : 'text-black'}
-                    className="hover:bg-gray-300 border-2 border-black font-bold rounded-3xl">
+                    className="hover:bg-gray-300 hover:text-black border-2 border-black font-bold rounded-3xl">
                     inactive posts
                 </Button>
             </Link>
